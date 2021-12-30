@@ -8,7 +8,7 @@
       height="125"
       width="125"
     > 
-    <p>{{ product.description }}</p>
+    <p>{{ product.price }} $</p>
           
     <button
       @click="removeFromCart(product)"
