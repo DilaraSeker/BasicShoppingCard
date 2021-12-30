@@ -14,7 +14,7 @@
       @click="removeFromCart(product)"
       class="addSubtractButton"
     > - </button>
-    <span>{{ product.quantity }}</span>
+    <span>{{ countProduct(product.id) }}</span>
     <button
       @click="addToCart(product)"
       class="addSubtractButton"
@@ -23,12 +23,19 @@
 </template>
 
 <script>
-  import {mapMutations} from "vuex";
+  import {mapMutations,mapState} from "vuex";
   export default {
     name: 'ShopProduct',
     props: ['product'],
+    computed: {
+    ...mapState(['cart']),
+  },
     methods: {
-    ...mapMutations(['addToCart','removeFromCart'])
+    ...mapMutations(['addToCart','removeFromCart']),
+    countProduct(productID) {
+      let filteredArr = this.cart.filter((e) => e.id === productID)
+      return filteredArr.length
+    }
   }
         /*
         data() {

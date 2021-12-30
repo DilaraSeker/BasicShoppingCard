@@ -43,7 +43,7 @@ export default new Vuex.Store({
       state.cart.push(payload)
     },
     removeFromCart(state,payload) {
-      let index = state.cart.findIndex(i => i.title === payload.title);
+      let index = state.cart.findIndex(i => i.id === payload.id);
       state.cart.splice(index,1)
     },
     setUniqueItems(state,payload) {
