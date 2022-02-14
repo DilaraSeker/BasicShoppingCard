@@ -1,5 +1,5 @@
 # Basic Shopping Cart
-Hard coded list of products with price will be shown on UI, whenever user clicks, product will be added to basket.. There will be another button on the screen for routing to the basket screen. On basket screen user can change quantity of products, remove the products, clear the all products.
+Hard coded list of products with price will be shown on UI, whenever user clicks, product will be added to basket. There will be another button on the screen for routing to the basket screen. On basket screen user can change quantity of products, remove the products, clear the all products.
 
 
 
